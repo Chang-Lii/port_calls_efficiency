@@ -1,0 +1,128 @@
+Economy_Label,CommercialMarket_Label,Average_age_of_vessels_years_Value,Median_time_in_port_days_Value,Average_size_GT_of_vessels_Value,Maximum_size_GT_of_vessels_Value
+Australia,Liquid bulk carriers,9,1.3,24799,85496
+Australia,Liquefied petroleum gas carriers,8,0.83,12940,53573
+Australia,Liquefied natural gas carriers,11,1.19,112020,149367
+Australia,Dry bulk carriers,11,1.67,60018,152311
+Australia,Dry breakbulk carriers,13,1.94,17202,66870
+Australia,Container ships,15,1.44,47224,111249
+Canada,Liquid bulk carriers,13,1.07,23240,161593
+Canada,Liquefied petroleum gas carriers,9,1.56,45810,50174
+Canada,Dry bulk carriers,22,0.36,28039,109982
+Canada,Dry breakbulk carriers,9,0.14,9255,49091
+Canada,Container ships,15,1.46,59803,176546
+China,Liquid bulk carriers,13,1.11,21119,170618
+China,Liquefied petroleum gas carriers,14,1.02,10025,60784
+China,Liquefied natural gas carriers,10,1.16,96307,168189
+China,Dry bulk carriers,14,2.01,43030,204014
+China,Dry breakbulk carriers,17,1.32,11160,149944
+China,Container ships,13,0.6,48856,237000
+Croatia,Liquid bulk carriers,16,1.03,17197,157844
+Croatia,Liquefied natural gas carriers,7,2.45,112138,120709
+Croatia,Dry bulk carriers,22,2.24,17579,94090
+Croatia,Dry breakbulk carriers,23,2.81,5141,149944
+Croatia,Container ships,17,0.67,46467,153774
+Denmark,Liquid bulk carriers,18,0.67,7685,93759
+Denmark,Liquefied petroleum gas carriers,13,1.27,3844,13549
+Denmark,Dry bulk carriers,12,0.81,10069,94863
+Denmark,Dry breakbulk carriers,24,0.8,3104,49091
+Denmark,Container ships,17,0.57,21745,214286
+France,Liquid bulk carriers,13,1.05,13965,166639
+France,Liquefied petroleum gas carriers,13,1.22,8973,53573
+France,Liquefied natural gas carriers,9,1.14,105836,163922
+France,Dry bulk carriers,15,3.25,24441,106251
+France,Dry breakbulk carriers,20,1.53,4508,149944
+France,Container ships,14,0.85,61200,236583
+Germany,Liquid bulk carriers,19,0.44,4738,170611
+Germany,Liquefied petroleum gas carriers,16,0.87,5300,47789
+Germany,Liquefied natural gas carriers,11,1.21,33988,135977
+Germany,Dry bulk carriers,13,2.52,28955,109768
+Germany,Dry breakbulk carriers,28,0.6,3621,149944
+Germany,Container ships,15,1.02,54461,237000
+Greece,Liquid bulk carriers,23,0.61,5153,161692
+Greece,Liquefied petroleum gas carriers,26,0.97,5165,25004
+Greece,Liquefied natural gas carriers,11,1.17,104182,144828
+Greece,Dry bulk carriers,28,0.69,7119,94232
+Greece,Dry breakbulk carriers,34,1.14,2968,40350
+Greece,Container ships,17,1.03,46846,237000
+Indonesia,Liquid bulk carriers,16,1.32,8589,161175
+Indonesia,Liquefied petroleum gas carriers,21,1.08,8254,53573
+Indonesia,Liquefied natural gas carriers,17,1.42,94456,136739
+Indonesia,Dry bulk carriers,18,2.69,25723,109716
+Indonesia,Dry breakbulk carriers,21,1.16,5134,57934
+Indonesia,Container ships,16,0.97,14237,176435
+Italy,Liquid bulk carriers,19,1.26,18506,160087
+Italy,Liquefied petroleum gas carriers,15,1.58,8684,48963
+Italy,Liquefied natural gas carriers,14,2.07,56587,117564
+Italy,Dry bulk carriers,15,3.46,25106,109534
+Italy,Dry breakbulk carriers,20,1.99,6536,149944
+Italy,Container ships,17,0.9,44002,236184
+Japan,Liquid bulk carriers,12,0.32,8289,169919
+Japan,Liquefied petroleum gas carriers,13,0.37,6955,54634
+Japan,Liquefied natural gas carriers,14,1.01,65790,163922
+Japan,Dry bulk carriers,14,0.9,17113,161294
+Japan,Dry breakbulk carriers,14,1.14,6878,66870
+Japan,Container ships,13,0.35,16602,236500
+"Korea, Republic of",Liquid bulk carriers,14,0.74,13791,167578
+"Korea, Republic of",Liquefied petroleum gas carriers,14,0.86,8641,55833
+"Korea, Republic of",Liquefied natural gas carriers,13,1.03,108541,168189
+"Korea, Republic of",Dry bulk carriers,13,2.71,33194,161294
+"Korea, Republic of",Dry breakbulk carriers,19,1.16,5496,149944
+"Korea, Republic of",Container ships,14,0.65,32172,236583
+Netherlands (Kingdom of the),Liquid bulk carriers,17,0.54,9034,170611
+Netherlands (Kingdom of the),Liquefied petroleum gas carriers,15,1.02,6678,52506
+Netherlands (Kingdom of the),Liquefied natural gas carriers,7,1.05,79209,163922
+Netherlands (Kingdom of the),Dry bulk carriers,12,1.07,36908,173756
+Netherlands (Kingdom of the),Dry breakbulk carriers,25,0.37,3781,91784
+Netherlands (Kingdom of the),Container ships,17,0.8,34096,237000
+Norway,Liquid bulk carriers,17,0.66,11959,166639
+Norway,Liquefied petroleum gas carriers,11,0.78,6893,37366
+Norway,Liquefied natural gas carriers,16,0.52,22458,121597
+Norway,Dry bulk carriers,15,0.86,18520,109768
+Norway,Dry breakbulk carriers,24,0.34,2940,84503
+Norway,Container ships,18,0.3,8516,25756
+Philippines,Liquid bulk carriers,12,0.82,6180,65696
+Philippines,Liquefied petroleum gas carriers,17,0.7,7248,54696
+Philippines,Dry bulk carriers,14,4.71,27368,151094
+Philippines,Dry breakbulk carriers,17,0.68,3552,66870
+Philippines,Container ships,16,0.82,18903,73172
+Russian Federation,Liquid bulk carriers,24,1.17,16254,87146
+Russian Federation,Liquefied petroleum gas carriers,20,2.13,12520,26515
+Russian Federation,Liquefied natural gas carriers,11,1.13,102420,128975
+Russian Federation,Dry bulk carriers,18,2.8,27620,104732
+Russian Federation,Dry breakbulk carriers,30,1.82,4569,48292
+Russian Federation,Container ships,19,1.56,13608,54519
+Singapore,Liquid bulk carriers,11,0.64,10368,170611
+Singapore,Liquefied petroleum gas carriers,12,1.1,9263,52666
+Singapore,Liquefied natural gas carriers,12,1.18,102510,163922
+Singapore,Dry bulk carriers,13,0.76,14854,111454
+Singapore,Dry breakbulk carriers,16,0.73,7771,149944
+Singapore,Container ships,14,0.85,57460,237000
+Spain,Liquid bulk carriers,13,0.86,11632,163209
+Spain,Liquefied petroleum gas carriers,13,1.06,7380,57494
+Spain,Liquefied natural gas carriers,11,1.05,95463,141671
+Spain,Dry bulk carriers,16,2.04,24934,107567
+Spain,Dry breakbulk carriers,17,1.27,5325,66870
+Spain,Container ships,17,0.6,34894,237000
+Sweden,Liquid bulk carriers,15,0.67,8609,164580
+Sweden,Liquefied petroleum gas carriers,13,0.91,8548,54000
+Sweden,Dry bulk carriers,20,0.58,7529,44616
+Sweden,Dry breakbulk carriers,21,1.13,3827,39433
+Sweden,Container ships,18,0.67,18512,214286
+Turkiye,Liquid bulk carriers,15,1.32,18853,169919
+Turkiye,Liquefied petroleum gas carriers,19,1.35,16825,52506
+Turkiye,Liquefied natural gas carriers,9,1.23,110239,130200
+Turkiye,Dry bulk carriers,17,3.68,24363,150918
+Turkiye,Dry breakbulk carriers,28,1.48,4524,66870
+Turkiye,Container ships,18,0.65,30488,236080
+United Kingdom,Liquid bulk carriers,15,1.09,13077,170611
+United Kingdom,Liquefied petroleum gas carriers,11,1.06,6769,56081
+United Kingdom,Liquefied natural gas carriers,8,1.19,89918,168189
+United Kingdom,Dry bulk carriers,16,2.6,23988,94879
+United Kingdom,Dry breakbulk carriers,19,1.51,3551,149944
+United Kingdom,Container ships,17,0.68,38169,237000
+United States of America,Liquid bulk carriers,12,1.71,37291,170611
+United States of America,Liquefied petroleum gas carriers,9,1.81,31394,60784
+United States of America,Liquefied natural gas carriers,6,1.36,106815,149367
+United States of America,Dry bulk carriers,19,2.25,29458,108901
+United States of America,Dry breakbulk carriers,19,1.88,12994,91784
+United States of America,Container ships,15,1.08,63680,194308
