@@ -26,21 +26,19 @@ geometry: margin=1in
 
 # Abstract {#sec-Abstract}
 
-This study examines why median port times differ across countries and commercial market segments by analyzing vessel-arrival data from UNCTAD’s Port Call and Performance Statistics. Since port stays are highly right-skewed, the response variable, median time in port, was log-transformed to improve the distribution. Several linear regression models were used to see how vessel characteristics, ship-type categories, country indicators, and interaction terms explain differences in log median port time.
+This study investigates why median port times differ between countries and commercial market segments, using aggregated vessel-arrival data from UNCTAD’s Port Call and Performance Statistics. Since port-time durations are highly right-skewed, the median port time was log-transformed. A sequence of linear regression models was then used to assess how vessel characteristics, ship-type categories, country indicators, and their interaction terms relate to log median port time.
 
-Comparing models with AIC, adjusted R², and nested F-tests showed that including vessel size, vessel age, ship type, country fixed effects, and a size-by-ship-type interaction gave the best mix of clarity and fit. The results show that larger vessels tend to have longer median port times, while vessel age does not have a clear effect. Ship-type and country categories help explain group differences, reflecting structural and operational factors that vary across maritime segments and countries. The joint F-test also shows that vessel size affects ship types differently, even though many individual interaction terms are not significant on their own.
+Comparing models with AIC, adjusted R², and nested F-tests shows that vessel size, ship type, country fixed effects, and the interaction between size and ship type best explain group differences. Larger vessels tend to have longer median port times, whereas vessel age does not show a clear association. Ship type and country effects remain important after accounting for vessel characteristics.
 
-Diagnostic checks show that the final model meets the main assumptions of linear regression. Overall, the findings suggest that both vessel characteristics and broader operational factors help explain why some country and ship-type groups have longer port times. These results point to stable structural patterns in maritime operations, rather than differences at the vessel level.
+Overall, the results indicate that both vessel structure and broader operational conditions influence differences in port-time performance across country and ship-type groups.
 
 # Introduction {#sec-intro}
 
-Maritime transport is essential to global trade, with over 80% of international goods moved by sea. A key measure of efficiency is *time in port*, which is the duration of ships' stays at the port for loading, unloading, and related work. Even small changes in port time can accumulate over many ship visits, affecting supply chain reliability, shipping costs, and the environment. Because of this, policymakers, port authorities, shipping companies, and trade researchers seek to understand the causes of differences in port times. This paper examines how vessel characteristics and operational factors influence port performance, focusing on the median time in port across different countries and ship types.
+Maritime transport carries more than 80% of global trade. One important measure of port performance is time in port, which is the time vessels spend loading, unloading, and performing other operations. Even small changes in port time can add up across many ship visits, affecting shipping costs, supply chain reliability, and environmental impact. Knowing what causes differences in port time is important to policymakers, port authorities, and shipping firms.
 
-Most previous studies on port efficiency have focused on factors at the port or vessel level, such as infrastructure capacity, congestion, or specific ship operations. There has been less attention to differences between country- and ship-type groups, which can reveal how different maritime segments operate across various national settings. This kind of analysis is essential because patterns such as the average age or size of vessels in a country or market segment often reflect long-term infrastructure, regulations, or industry practices, rather than current port conditions. This paper addresses this gap by exploring whether vessel characteristics and market segments are associated with differences in median port time for these groups. For example, if older vessels typically have longer median port times, this may suggest that countries or market segments with older fleets face slower port operations.
+Most research looks at vessel-level or port-level factors like congestion or infrastructure. There is less information about differences between country and ship-type groups, which relate to long-term features such as fleet makeup, regulations, and market segments. This paper explores whether group-level vessel traits, especially average vessel age and size, and market segments are linked to differences in median port time across countries and ship types.
 
-To answer this question, the analysis uses vessel-arrival data from the UNCTAD Port Call and Performance dataset and builds a regression framework to measure how vessel characteristics like average age and gross tonnage, commercial market segment, country-level indicators, and their interactions relate to each other. Because the data are grouped by country and ship type, the results show differences between these group profiles, not individual vessels or ports. The analysis creates several linear models with increasing detail, compares them using information criteria and nested F-tests, and then chooses one for further study. This final model estimates how median port time varies across countries and ship types, while accounting for vessel characteristics.
-
-The main findings indicate that vessel size, commercial market segment, and country-level factors are linked to differences in median port time across grouped operational categories. These results reveal structural trends in maritime operations that could inform port planning, fleet management, and discussions on trade efficiency. The paper is mainly organized as follows. Section 2 details the data and variables used in the analysis. Section 3 explains the modeling approach and inferential framework. Section 4 presents the regression results and model diagnostics. Section 5 explores the implications and limitations of the findings. 
+The study uses aggregated data from UNCTAD’s Port Call and Performance Statistics to build several linear regression models, each adding more detail such as ship type, country, and their interactions. Comparing these models shows that vessel size, ship type, country, and the interaction between size and ship type explain much of the variation in median port time. Vessel age, however, has little effect. These results point to broader patterns in maritime operations rather than differences between individual vessels. The paper is organised as follows: Section 2 describes the data; Section 3 outlines the modelling approach; Section 4 presents the results and diagnostics; and Section 5 discusses implications and limitations.
 
 # Data {#sec-data}
 
@@ -65,20 +63,6 @@ Similarly, the variable **Size (GT)** indicates the average gross tonnage of ves
 The variable **ShipType** shows the commercial market segment for each observation, corresponding to the raw variable `CommercialMarket_Label`. The ship type categories include liquid bulk carriers, liquefied petroleum gas (LPG) carriers, liquefied natural gas (LNG) carriers, dry bulk carriers, dry breakbulk carriers, roll-on and roll-off ships, container ships, passenger ships, and an aggregate category labeled “All ships.”
 
 The variable **Country** specifies the economy where port calls occurred, as recorded in the raw variable `Economy_Label`. The dataset includes economies such as Australia, Canada, China, Croatia, Denmark, France, Germany, Greece, Indonesia, Italy, Japan, the Republic of Korea, the Netherlands, Norway, the Philippines, the Russian Federation, Singapore, Spain, Sweden, Türkiye, the United Kingdom, the United States of America, and a global aggregate category labeled “World.”
-
-
-### Summary
-
-Each observation in the dataset represents a specific combination of country and ship type. The main variables used for modeling are:
-
-- **Median time in port** (response)  
-- **Age** (average vessel age)  
-- **Size (GT)** (average gross tonnage)  
-- **ShipType** (commercial market category)  
-- **Country** (economy identifier)
-
-These variables describe the economic setting (Country), the commercial category (ShipType), and the main features of vessel groups (Age and Size). They provide the basis for the modeling in the next section.
-
 
 ## Data Cleaning
 
@@ -122,7 +106,10 @@ The Q-Q plot of the transformed variable shows a clear improvement in normality.
 
 #### Summary
 
-Overall, these diagnostics show that the raw response variable is highly right-skewed and has a long tail. Using a logarithmic transformation makes the distribution more symmetric, reduces the impact of extreme values, and matches theoretical normal quantiles more closely. Because of this, all later regression models use $log(\text{median time in port})$ as the response variable.
+Each observation in the dataset is a unique combination of country and ship type. The main variables in the analysis are the response variable, **median time in port**, and several group-level vessel characteristics: average vessel age, average gross tonnage (Size), commercial market segment (ShipType), and economy identifier (Country). These variables together describe the economic context, commercial category, and structural features of vessel groups, which are the foundation of the modelling framework.
+
+Diagnostic checks reveal that the raw median port-time variable is highly right-skewed with a long upper tail. Using a logarithmic transformation makes the distribution more symmetric and less affected by extreme values, which helps prepare the data for linear regression. Therefore, all later models use $\log(\text{median time in port})$ as the response variable.
+
 
 # Methods {#sec-methods}
 
@@ -174,32 +161,44 @@ $$
 
 The effect of vessel size on port time can vary depending on the type of ship. For example, loading systems for large bulk carriers are different from those used for large container vessels. To let the effect of size change with ship type, we add an interaction term:
 $$
+\begin{aligned}
 \log(\text{Median Time In Port}_i)
-= \beta_0
-+ \beta_1\,\text{Age}_i
-+ \beta_2\,\text{Size}_i
-+ \gamma_{j(i)}\,\text{ShipType}_{j(i)}
-+ \theta_{j(i)}\,
-    \bigl(\text{Size}_i \times \text{ShipType}_{j(i)}\bigr)
-+ \delta_{k(i)}\,\text{Country}_{k(i)}
-+ \varepsilon_i
+&= \beta_0 
+  + \beta_1\,\text{Age}_i 
+  + \beta_2\,\text{Size}_i \\
+&\quad
+  + \gamma_{j(i)}\,\text{ShipType}_{j(i)} \\
+&\quad
+  + \theta_{j(i)}\,
+    \bigl(\text{Size}_i \times \text{ShipType}_{j(i)}\bigr) \\
+&\quad
+  + \delta_{k(i)}\,\text{Country}_{k(i)}
+  + \varepsilon_i
+\end{aligned}
 $$
+
 
 
 5. **Model Int-2:** Age × ShipType interaction
 
 Similarly, the operational impact of vessel age may differ across ship types—for example, older bulk carriers might face different delays than older container ships. Thus, we consider:
 $$
+\begin{aligned}
 \log(\text{Median Time In Port}_i)
-= \beta_0
-+ \beta_1\,\text{Age}_i
-+ \beta_2\,\text{Size}_i
-+ \gamma_{j(i)}\,\text{ShipType}_{j(i)}
-+ \theta_{j(i)}\,
-    \bigl(\text{Age}_i \times \text{ShipType}_{j(i)}\bigr)
-+ \delta_{k(i)}\,\text{Country}_{k(i)}
-+ \varepsilon_i
+&= \beta_0 
+  + \beta_1\,\text{Age}_i 
+  + \beta_2\,\text{Size}_i \\
+&\quad
+  + \gamma_{j(i)}\,\text{ShipType}_{j(i)} \\
+&\quad
+  + \theta_{j(i)}\,
+    \bigl(\text{Age}_i \times \text{ShipType}_{j(i)}\bigr) \\
+&\quad
+  + \delta_{k(i)}\,\text{Country}_{k(i)}
+  + \varepsilon_i
+\end{aligned}
 $$
+
 
 ## Model Comparison and Selection
 
@@ -273,16 +272,22 @@ Model Int-1 was selected as the final model because it hachieved the lowest AIC,
 ## Final Model(Model Int-1)
 
 $$
+\begin{aligned}
 \log(\text{Median Time In Port}_i)
-= \beta_0
-+ \beta_1\,\text{Age}_i
-+ \beta_2\,\text{Size}_i
-+ \gamma_{j(i)}\,\text{ShipType}_{j(i)}
-+ \theta_{j(i)}\,
-    \bigl(\text{Size}_i \times \text{ShipType}_{j(i)}\bigr)
-+ \delta_{k(i)}\,\text{Country}_{k(i)}
-+ \varepsilon_i
+&= \beta_0 
+  + \beta_1\,\text{Age}_i 
+  + \beta_2\,\text{Size}_i \\
+&\quad
+  + \gamma_{j(i)}\,\text{ShipType}_{j(i)} \\
+&\quad
+  + \theta_{j(i)}\,
+    \bigl(\text{Size}_i \times \text{ShipType}_{j(i)}\bigr) \\
+&\quad
+  + \delta_{k(i)}\,\text{Country}_{k(i)}
+  + \varepsilon_i
+\end{aligned}
 $$
+
 
 ### Estimate Coefficent
 
@@ -315,7 +320,7 @@ In summary, the reasonable residual error and moderate adjusted $R^2$ show that 
 ### ANOVA
 
 #### ANOVA Table for Model Int1 {#tab-anova}
-![Model Comparison](Tables/ANOVA.png){fig-align="center"}
+![ANOVA](Tables/ANOVA.png){fig-align="center"}
 
 The ANOVA results for the selected interaction model show that several groups of predictors significantly help explain variation in log median port time across the combined country and ship type observations.
 
