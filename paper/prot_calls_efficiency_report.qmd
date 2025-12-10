@@ -46,7 +46,7 @@ The main findings indicate that vessel size, commercial market segment, and coun
 
 ## Introduction of Variables
 
-The dataset used in this study is the 2023 release of UNCTAD’s Port Call and Performance Statistics (https://unctadstat.unctad.org/datacentre/dataviewer/US.PortCalls). This dataset integrates Automatic Identification System (AIS) vessel-tracking data with MarineTraffic port-mapping intelligence. Data are aggregated by country and ship type, encompassing vessels of 1,000 gross tonnage (GT) or greater. For each group, UNCTAD supplies summary measures of vessel fleet characteristics, including average age and gross tonnage, as well as port-time performance indicators [@UNCTAD_PortCall].
+The dataset used in this study is the 2023 release of UNCTAD’s Port Call and Performance Statistics (https://unctadstat.unctad.org/datacentre/dataviewer/US.PortCalls). This dataset integrates Automatic Identification System (AIS) vessel-tracking data with MarineTraffic port-mapping intelligence. The data are aggregated by country and ship type, and include vessels of 1,000 gross tonnage (GT) or greater. For each group, UNCTAD provides summary measures of vessel fleet characteristics, such as average age and gross tonnage, in addition to port-time performance indicators [@UNCTAD_PortCall].
 
 The main variables used in this analysis are explained below:
 
@@ -56,13 +56,13 @@ The response variable, **median time in port (days)**, represents the median num
 
 ### Numerical Variables
 
-The variable **Age** represents the average age, in years, of vessels calling at ports associated with each country and ship type combination. In the raw dataset, this variable is labeled as Average_age_of_vessels_years_Value. Each vessel's contribution to the average is weighted by its number of arrivals within the group, so that vessels with more frequent visits exert greater influence on the reported value.
+The variable **Age** represents the average age, in years, of vessels calling at ports associated with each country and ship type combination. In the raw dataset, this variable is labeled as `Average_age_of_vessels_years_Value`. Each vessel's contribution to the average is weighted by its number of arrivals within the group, so that vessels with more frequent visits exert greater influence on the reported value.
 
-Similarly, the variable **Size (GT)** indicates the average gross tonnage of vessels in each country and ship type group, corresponding to the raw variable Average_size_GT_of_vessels_Value. As with Age, this measure is weighted by the number of port calls, reflecting the structural characteristics of vessels most commonly serving the group.
+Similarly, the variable **Size (GT)** indicates the average gross tonnage of vessels in each country and ship type group, corresponding to the raw variable `Average_size_GT_of_vessels_Value`. As with Age, this measure is weighted by the number of port calls, reflecting the structural characteristics of vessels most commonly serving the group.
 
 ### Categorical Variables
 
-The variable **ShipType** shows the commercial market segment for each observation, corresponding to the raw variable `CommercialMarket_Label`. The ship type categories include liquid bulk carriers, liquefied petroleum gas (LPG) carriers, liquefied natural gas (LNG) carriers, dry bulk carriers, dry breakbulk carriers, roll-on/roll-off ships, container ships, passenger ships, and an aggregate category labeled “All ships.”
+The variable **ShipType** shows the commercial market segment for each observation, corresponding to the raw variable `CommercialMarket_Label`. The ship type categories include liquid bulk carriers, liquefied petroleum gas (LPG) carriers, liquefied natural gas (LNG) carriers, dry bulk carriers, dry breakbulk carriers, roll-on and roll-off ships, container ships, passenger ships, and an aggregate category labeled “All ships.”
 
 The variable **Country** specifies the economy where port calls occurred, as recorded in the raw variable `Economy_Label`. The dataset includes economies such as Australia, Canada, China, Croatia, Denmark, France, Germany, Greece, Indonesia, Italy, Japan, the Republic of Korea, the Netherlands, Norway, the Philippines, the Russian Federation, Singapore, Spain, Sweden, Türkiye, the United Kingdom, the United States of America, and a global aggregate category labeled “World.”
 
@@ -286,7 +286,7 @@ $$
 
 ### Estimate Coefficent
 
-Table @tbl-model-int1 shows the estimated regression coefficients from the final model. Since the data are grouped by country and ship type, each coefficient describes differences between these groups, not individual vessels or ports. The response variable is the log of median port time, so all effects reflect percentage changes in median port time.
+Table `Estimated coefficients for Model Int-1` in Appendix shows the estimated regression coefficients from the final model. Since the data are grouped by country and ship type, each coefficient describes differences between these groups, not individual vessels or ports. The response variable is the log of median port time, so all effects reflect percentage changes in median port time.
 
 When vessel size, ship type, country, and the size-by-ship-type interaction are considered, the estimated effect of average vessel age is small and not statistically significant $(\hat{\beta}_1 = -0.0054,\; p = 0.69)$. This means that differences in average vessel age between country and ship-type groups do not show clear evidence of systematic differences in median port time on the log scale.
 
@@ -379,8 +379,6 @@ All analysis code, raw data, and documentation are available in GitHub repositor
 
 # Appendix {#sec-appendix}
 
-::: {#tbl-model-int1}
-![Estimation of Model-int1](Tables/Model-int1_summary.png){fig-align="center"}
+![Estimated coefficients for Model Int-1](Tables/Model-int1_summary.png)
 
-Table: Estimated coefficients from Model_int1
-:::
+# Reference
